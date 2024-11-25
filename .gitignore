@@ -1,0 +1,35 @@
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.env/
+.venv/
+
+# Logs
+*.log
+*.log.*
+
+# Python-specific files
+*.py[co]
+*.egg-info/
+*.eggs/
+*.pyo
+
+# SQLite database
+*.sqlite3
+*.db
+
+# Text files
+*.txt
+
+# Include requirements
+!requirements.txt
+
+# Environment variables
+.env
+
+# Cryptography and sensitive files
+*.key
+*.pem
