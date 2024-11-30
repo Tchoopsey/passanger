@@ -1,16 +1,25 @@
 from security.encryption import create_token, read_token
-from security.hasher import create_hash, retrieve_hash
+
+from storage.db import check_master_hash, create_database, insert_master_pw
 
 
 def main():
+    db_input_prompt = input("Create new DB (y/n)? ")
+    if db_input_prompt == 'y':
+        create_database()
+    else:
+        pass
+
+    
+
     print("1. Create master password")
     print("2. Continue")
     hashing_option = input("> ")
 
     if hashing_option == '1':
-        create_hash()
+        insert_master_pw()
     elif hashing_option == '2':
-        retrieve_hash()
+        check_master_hash()
 
     print("1. Create new password")
     print("2. Get password")
